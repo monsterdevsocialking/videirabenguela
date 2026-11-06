@@ -349,3 +349,26 @@ p{font-size:15px;line-height:1.85}
  .cells-stack .cell-leader-cta{transition:none}
  .cells-stack .cell-leader-cta:hover{transform:none}
 }
+
+
+/* AMC · Baralho progressivo: cada carta sobe e cobre a anterior */
+.cells-section{overflow:visible!important;isolation:isolate;padding-bottom:clamp(150px,22vh,230px)}
+.cells-stack{display:grid;grid-template-columns:minmax(0,760px);justify-content:center;row-gap:clamp(105px,16vh,145px);padding:18px 12px 90px}
+.cells-stack .cell-card{
+  position:sticky;top:clamp(92px,12vh,118px);
+  z-index:calc(10 + var(--card-index));
+  opacity:0;transform:translate3d(58px,42px,0) rotate(.7deg);
+  transition:opacity .45s ease,transform .68s cubic-bezier(.2,.75,.25,1),box-shadow .3s ease;
+  will-change:transform,opacity;
+}
+.cells-stack .cell-card.is-visible{opacity:1;transform:translate3d(0,0,0) rotate(0)}
+.cells-stack .cell-card:hover{box-shadow:0 24px 52px #211d3540}
+@media(max-width:700px){
+ .cells-section{padding-bottom:150px}
+ .cells-stack{row-gap:95px;padding:12px 4px 70px}
+ .cells-stack .cell-card{top:82px;transform:translate3d(34px,34px,0) rotate(.5deg)}
+ .cells-stack .cell-card.is-visible{transform:translate3d(0,0,0) rotate(0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .cells-stack .cell-card{opacity:1;transform:none;transition:none;will-change:auto}
+}

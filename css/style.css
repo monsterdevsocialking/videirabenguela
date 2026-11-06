@@ -125,3 +125,35 @@
 .form-hint{font-size:12px;line-height:1.7}
 @media(max-width:800px){.cells-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.church-map iframe{height:330px}}
 @media(max-width:560px){.cells-grid{grid-template-columns:1fr}.church-map{padding:16px}.map-heading{align-items:flex-start;flex-direction:column}.church-map iframe{height:290px}.cell-card{min-height:0}}
+
+
+/* Contraste refinado: texto claro nos fundos roxos e escuro nos fundos claros */
+.schedule-card,.contact-form,.church-map{background:#433d5e}
+.schedule-card h3,.schedule-card p,.schedule-card small,.schedule-card a,
+.contact-form .form-hint,.map-caption,.map-heading h3,.map-heading a{color:#edf0f1}
+.contact-form .field label{color:#edf0f1}
+.light .section-intro,.light .pillar p,.light .visit-intro p,
+.light .location-row p,.light .location-contact,.light .visit-step p,
+.light .agenda-item p,.light .cell-neighborhood,.light .cell-phone{color:#514b69}
+.light .section-title,.light .section-head h2,.light .pillar h3,
+.light .location-row h3,.light .visit-step h3,.light .agenda-item h3{color:#433d5e}
+.cells-section .section-intro{color:#514b69}
+.cells-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cell-card{overflow:hidden;display:flex;flex-direction:column;min-height:235px;padding:0;background:#fff;border:1px solid #d5d6df;border-radius:5px;box-shadow:0 12px 30px #302b4710;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.cell-card:hover{transform:translateY(-5px);border-color:#5898a2;box-shadow:0 18px 38px #302b4720}
+.cell-card:before{content:"";display:block;height:5px;background:linear-gradient(90deg,#433d5e 0%,#5898a2 65%,#989cb4 100%)}
+.cell-card-top{display:flex;align-items:center;justify-content:space-between;padding:17px 20px 0}
+.cell-number{color:#433d5e;font:italic 22px var(--serif);letter-spacing:-.04em}
+.cell-tag{padding:6px 9px;border:1px solid #d8d9e1;border-radius:2px;color:#514b69;font-size:9px;font-weight:700;letter-spacing:.12em}
+.cell-card h3{margin:14px 20px 18px;color:#302b47;font:600 21px/1.2 var(--display)}
+.cell-detail{display:flex;align-items:center;gap:12px;margin:0 20px 15px}
+.cell-detail-icon{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#edf0f1;color:#433d5e;font-size:20px}
+.cell-detail small,.cell-contact small{display:block;margin-bottom:4px;color:#706b80;font-size:9px;font-weight:700;letter-spacing:.12em}
+.cell-neighborhood{margin:0;color:#433d5e;font-size:13px;line-height:1.45;font-weight:600}
+.cell-contact{display:flex;align-items:center;gap:11px;margin-top:auto;padding:13px 20px;background:#433d5e}
+.cell-whatsapp-mark{display:grid;place-items:center;width:30px;height:30px;flex:0 0 30px;border:1px solid #989cb4;border-radius:50%;color:#edf0f1;font-size:10px;font-weight:700}
+.cell-contact small{margin-bottom:3px;color:#c5c1d2}
+.cell-phone{margin:0;color:#edf0f1;font-size:13px;line-height:1.4;font-weight:600}
+.cell-arrow{margin-left:auto;color:#5898a2;font-size:18px}
+@media(max-width:800px){.cells-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.cells-grid{grid-template-columns:1fr;gap:14px}.cell-card{min-height:0}.cell-card h3{font-size:20px}}

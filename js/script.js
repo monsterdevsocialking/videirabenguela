@@ -1,93 +1,12 @@
-        // Menu mobile
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenu.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Fechar menu ao clicar em um link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Inicializar Swiper (carrossel de depoimentos)
-        const swiper = new Swiper('.mySwiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-            },
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-        
-        // Botão de voltar ao topo
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
-            }
-        });
-        
-        // Animação ao rolar a página
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.value-card, .event-card, .blog-card, .section-header');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (elementPosition < screenPosition) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        };
-        
-        // Adicionar estilos iniciais para animação
-        document.querySelectorAll('.value-card, .event-card, .blog-card').forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
-            element.style.transition = 'all 0.6s ease';
-        });
-        
-        document.querySelectorAll('.section-header').forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(-30px)';
-            element.style.transition = 'all 0.6s ease';
-        });
-        
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
+(() => {
+ const loader=document.querySelector('.preloader');document.body.classList.add('locked');
+ const finish=()=>{if(loader)loader.classList.add('done');document.body.classList.remove('locked')};
+ window.addEventListener('load',()=>setTimeout(finish,450),{once:true});setTimeout(finish,2200);
+ const header=document.querySelector('.site-header'),menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');
+ const scroll=()=>{if(header)header.classList.toggle('scrolled',window.scrollY>30)};scroll();window.addEventListener('scroll',scroll,{passive:true});
+ if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}))}
+ const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ const glow=document.querySelector('.cursor-glow');if(glow&&matchMedia('(pointer:fine)').matches)window.addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true});
+ const form=document.querySelector('#visitForm');if(form)form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const message='Olá! O meu nome é '+(d.get('name')||'')+'. Contacto: '+(d.get('contact')||'')+'. Pretendo: '+(d.get('date')||'A combinar')+'. '+(d.get('message')||'Gostaria de obter mais informações sobre a igreja.');window.open('https://wa.me/244932204168?text='+encodeURIComponent(message),'_blank','noopener')});
+ document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+})();

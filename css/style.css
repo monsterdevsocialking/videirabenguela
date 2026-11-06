@@ -103,3 +103,25 @@
   .hero-description,.section-intro,.visit-intro p{font-size:13px}
 }
 
+
+/* Mapa, células e formulários — ajustes de legibilidade em todo o site */
+.church-map{margin-top:34px;padding:24px;background:#514b69;border:1px solid #989cb455}
+.map-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+.map-heading h3{margin:8px 0 0;color:#edf0f1;font:600 clamp(23px,3vw,32px) var(--display)}
+.map-heading a{color:#edf0f1;font-size:13px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.church-map iframe{display:block;width:100%;height:390px;border:0}
+.map-caption{margin:14px 0 0;color:#e0dfe7;font-size:13px;line-height:1.7}
+.cells-section{background:#edf0f1}
+.cells-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cell-card{position:relative;min-height:160px;padding:22px;background:#fff;border:1px solid #989cb455}
+.cell-number{color:#5898a2;font:italic 16px var(--serif)}
+.cell-card h3{margin:12px 0 10px;color:#433d5e;font:600 19px var(--display)}
+.cell-neighborhood,.cell-phone{margin:5px 0;color:#706b80;font-size:13px;line-height:1.6;font-weight:500}
+.cell-phone{color:#625d70}
+.field label{font-size:12px;letter-spacing:.1em}
+.field input,.field textarea,.field select{font-size:15px;line-height:1.55;padding:15px 16px}
+.field input::placeholder,.field textarea::placeholder{color:#c5c1d2;opacity:1}
+.field select option{background:#433d5e;color:#edf0f1}
+.form-hint{font-size:12px;line-height:1.7}
+@media(max-width:800px){.cells-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.church-map iframe{height:330px}}
+@media(max-width:560px){.cells-grid{grid-template-columns:1fr}.church-map{padding:16px}.map-heading{align-items:flex-start;flex-direction:column}.church-map iframe{height:290px}.cell-card{min-height:0}}

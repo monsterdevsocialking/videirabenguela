@@ -76,3 +76,30 @@
 .cta-inner .button{background:#433d5e;color:#edf0f1}
 .cta-inner .button:hover{background:#5898a2;color:#433d5e}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Ajustes finos de legibilidade e presença da marca */
+.brand{gap:5px}
+.brand img{width:88px;height:60px}
+.brand-word{font-size:12px}
+.brand-word small{font-size:9px}
+.nav-links a{font-size:11px;color:#edf0f1}
+.hero-description{color:#e0dfe7;font-size:13.5px;font-weight:500}
+.hero-note{color:#c5c1d2;font-size:9px}
+.section-intro{color:#c5c1d2;font-size:13px;font-weight:500}
+.vision-copy p,.schedule-card p,.agenda-copy p,.agenda-item p,.page-hero p{color:#e0dfe7;font-weight:500}
+.schedule-card p,.agenda-copy p,.agenda-item p{font-size:12px}
+.footer-about p,.footer-col a,.footer-col p{color:#c0bdcc;font-size:11px;font-weight:500}
+.footer-bottom{color:#aaa6bd;font-size:9px}
+.form-hint{color:#c5c1d2;font-size:10px}
+.field label{font-size:9px;font-weight:600}
+.light .section-intro,.pillar p,.visit-intro p,.location-row p,.location-contact,.visit-step p{color:#706b80;font-weight:500}
+.pillar p,.location-row p,.location-contact,.visit-step p{font-size:12px}
+.visit-intro p{font-size:13px}
+@media(max-width:700px){
+  .brand img{width:76px;height:52px}
+  .brand-word{font-size:11px}
+  .brand-word small{font-size:8px}
+  .nav-links a{font-size:12px}
+  .hero-description,.section-intro,.visit-intro p{font-size:13px}
+}
+

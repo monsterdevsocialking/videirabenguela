@@ -254,9 +254,9 @@ p{font-size:15px;line-height:1.85}
 .cells-stack{
   --numcards:13;
   display:grid;
-  grid-template-columns:minmax(0,760px);
+  grid-template-columns:minmax(0,900px);
   justify-content:center;
-  row-gap:clamp(70px,10vh,100px);
+  row-gap:clamp(34px,5vh,52px);
   padding:20px 12px 100px;
   view-timeline-name:--cells-stack;
   view-timeline-axis:block;
@@ -269,7 +269,7 @@ p{font-size:15px;line-height:1.85}
   flex-direction:column;
   isolation:isolate;
   overflow:hidden;
-  min-height:clamp(330px,43vh,390px);
+  min-height:clamp(360px,48vh,430px);
   padding:0;
   background:#433d5e;
   border:1px solid #989cb4;
@@ -407,8 +407,8 @@ p{font-size:15px;line-height:1.85}
 }
 @media(max-width:700px){
   .cells-section{padding-bottom:150px}
-  .cells-stack{row-gap:64px;padding:12px 4px 80px}
-  .cells-stack .cell-card{top:78px;min-height:310px;border-radius:2px}
+  .cells-stack{row-gap:38px;padding:12px 4px 80px}
+  .cells-stack .cell-card{top:78px;min-height:330px;border-radius:2px}
   .cells-stack .cell-card-top{padding:24px 22px 0}
   .cells-stack .cell-number{width:46px;height:46px;font-size:20px}
   .cells-stack .cell-tag{font-size:8px;letter-spacing:.1em;padding:7px 9px}

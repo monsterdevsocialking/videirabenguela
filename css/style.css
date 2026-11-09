@@ -712,3 +712,39 @@ p{font-size:15px;line-height:1.85}
   .cell-story .cell-story-top,
   .cell-story .cell-story-bottom{width:100%;margin-left:0;margin-right:0}
 }
+
+
+/* Ajuste final das células — alinhamento junto às margens e separadores */
+@media(min-width:761px){
+  .cell-story:nth-child(odd) .cell-story-top,
+  .cell-story:nth-child(odd) .cell-story-bottom{
+    width:96%;
+    margin-left:auto;
+    margin-right:0;
+  }
+  .cell-story:nth-child(even) .cell-story-top,
+  .cell-story:nth-child(even) .cell-story-bottom{
+    width:96%;
+    margin-left:0;
+    margin-right:auto;
+  }
+}
+.cell-story-eyebrow{
+  margin-bottom:10px;
+  font-size:clamp(19px,2.5vw,30px);
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.cell-story-bottom{
+  border-top:0;
+  padding-top:clamp(16px,2vw,24px);
+}
+.cell-stories{border-top:0}
+.cell-story{border-bottom:1px solid #433d5e35}
+.cell-story:last-child{border-bottom:0}
+@media(max-width:760px){
+  .cell-story .cell-story-top,
+  .cell-story .cell-story-bottom{width:100%;margin-left:0;margin-right:0}
+  .cell-story-eyebrow{font-size:20px}
+}

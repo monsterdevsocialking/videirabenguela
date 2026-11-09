@@ -1,0 +1,49 @@
+/* Videira Benguela — alternativa Swiss clara
+   Carregada apenas em visite-swiss.html; não altera a versão original. */
+:root{color-scheme:light}
+html{background:#fff;scroll-behavior:smooth}
+body{background:#fff!important;color:#24242a!important}
+.noise,.cursor-glow{display:none!important}
+.site-header{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #e8e8e8!important;box-shadow:none!important}
+.site-header .brand-word,.nav-links a,.menu-toggle{color:#282832!important}
+.nav-links a[aria-current="page"]{color:#36838d!important}
+.page-hero,.section,.section.light{background:#fff!important;color:#24242a!important}
+.page-hero{border-bottom:1px solid #ededed}
+.page-hero h1,.section-title,.visit-intro h2,.section h2,.section h3{color:#24242a!important}
+.page-hero p,.section p,.section-intro,.visit-note,.map-caption{color:#666!important}
+.eyebrow,.page-number{color:#36838d!important}
+.section-head{border-color:#e8e8e8!important}
+.location-row,.visit-step,.church-map,.contact-form{background:#fff!important;border:1px solid #e8e8e8!important;box-shadow:none!important;border-radius:0!important}
+.location-row h3,.location-row p,.location-contact,.visit-step h3,.visit-step p,.map-heading h3{color:#24242a!important}
+.location-row a,.map-heading a,.location-contact a{color:#433d5e!important}
+.cells-section{background:#fff!important}
+.cells-section .cell-stories{border:0!important}
+.cells-section .cell-story{background:transparent!important;border:0!important;border-bottom:1px solid #dedede!important;box-shadow:none!important;border-radius:0!important}
+.cells-section .cell-story:last-child{border-bottom:0!important}
+.cell-story-heading h3,.cell-story-number,.cell-story-detail strong,.cell-story-detail>a:not(.cell-story-link){color:#222!important}
+.cell-story-eyebrow,.cell-story-link,.cell-story-place>a span{color:#36838d!important}
+.cell-story-label,.cell-story-count,.cell-stories-note{color:#777!important}
+.cell-story-link{border-bottom:1px solid #36838d!important}
+.cell-story-bottom{border-top:0!important}
+.style-switch{margin-top:16px!important;font-size:12px!important}
+.style-switch a{display:inline-block;color:#36838d!important;text-decoration:none!important;border-bottom:1px solid #36838d;padding-bottom:4px;font-weight:700;letter-spacing:.02em}
+.style-switch a span{margin-left:5px}
+.contact-layout,.contact-copy{color:#24242a!important}
+#contacto{background:#f7f8f8!important;color:#24242a!important}
+#contacto h2,#contacto p,#contacto strong{color:#24242a!important}
+#contacto a{color:#36838d!important}
+.contact-form .field label{color:#333!important}
+.contact-form input,.contact-form select,.contact-form textarea{background:#fff!important;color:#24242a!important;border:1px solid #d9d9d9!important;border-radius:0!important}
+.contact-form .button,.cta-panel .button{background:#433d5e!important;color:#fff!important;border-radius:0!important}
+.cta-panel{background:#f3f4f4!important;color:#24242a!important}
+.cta-panel h2,.cta-panel p{color:#24242a!important}
+.site-footer{background:#fff!important;color:#24242a!important;border-top:1px solid #e5e5e5!important}
+.site-footer .brand-word,.site-footer p,.site-footer h4,.site-footer a,.footer-bottom{color:#333!important}
+.site-footer .social-row a{border-color:#ccc!important}
+.whatsapp-float{box-shadow:none!important}
+@media(max-width:760px){
+ .site-header{background:#fff!important}
+ .nav-links{background:#fff!important;border-top:1px solid #eee!important}
+ .nav-links a{color:#24242a!important}
+ .cell-story-heading h3{color:#222!important}
+}

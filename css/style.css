@@ -675,3 +675,40 @@ p{font-size:15px;line-height:1.85}
     transition:none;
   }
 }
+
+
+/* Zigzag editorial — conteúdo alternado entre direita e esquerda */
+@media(min-width:761px){
+  .cell-story:nth-child(odd) .cell-story-top,
+  .cell-story:nth-child(odd) .cell-story-bottom{
+    width:88%;
+    margin-left:auto;
+  }
+  .cell-story:nth-child(even) .cell-story-top,
+  .cell-story:nth-child(even) .cell-story-bottom{
+    width:88%;
+    margin-right:auto;
+  }
+  .cell-story:nth-child(odd).reveal .cell-story-number,
+  .cell-story:nth-child(odd).reveal .cell-story-heading,
+  .cell-story:nth-child(odd).reveal .cell-story-bottom{
+    transform:translateX(34px);
+  }
+  .cell-story:nth-child(even).reveal .cell-story-number,
+  .cell-story:nth-child(even).reveal .cell-story-heading,
+  .cell-story:nth-child(even).reveal .cell-story-bottom{
+    transform:translateX(-34px);
+  }
+  .cell-story:nth-child(odd).reveal.in-view .cell-story-number,
+  .cell-story:nth-child(odd).reveal.in-view .cell-story-heading,
+  .cell-story:nth-child(odd).reveal.in-view .cell-story-bottom,
+  .cell-story:nth-child(even).reveal.in-view .cell-story-number,
+  .cell-story:nth-child(even).reveal.in-view .cell-story-heading,
+  .cell-story:nth-child(even).reveal.in-view .cell-story-bottom{
+    transform:translateX(0);
+  }
+}
+@media(max-width:760px){
+  .cell-story .cell-story-top,
+  .cell-story .cell-story-bottom{width:100%;margin-left:0;margin-right:0}
+}
